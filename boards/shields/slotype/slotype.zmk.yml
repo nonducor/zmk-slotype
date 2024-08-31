@@ -1,0 +1,11 @@
+file_format: "1"
+id: slotype
+name: slotype
+type: shield
+url: https://nonducor.org/
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - slotype_left
+  - slotype_right

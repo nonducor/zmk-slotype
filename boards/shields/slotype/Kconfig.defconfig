@@ -1,0 +1,23 @@
+if SHIELD_SLOTYPE
+
+config ZMK_KEYBOARD_NAME
+    default "Slotype"
+
+endif
+
+if SHIELD_SLOTYPE_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Slotype"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_SLOTYPE_LEFT || SHIELD_SLOTYPE_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif
