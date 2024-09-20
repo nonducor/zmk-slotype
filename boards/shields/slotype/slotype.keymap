@@ -56,7 +56,7 @@
     &kp GRAVE   &kp Q       &kp W       &kp E             &kp R            &kp T                         &kp Y       &kp U              &kp I               &kp O       &kp P         &kp BSLH
     &kp ESC     &hm LGUI A  &hm LALT S  &hm LSHIFT D      &hm LCTRL F      &hm RALT G                    &hm RALT H  &hm RCTRL J        &hm RSHIFT K        &hm LALT L  &hm LGUI SEMI &kp SQT
     &caps_word  &kp Z       &kp X       &kp C             &kp V            &kp B                         &kp N       &kp M              &kp COMMA           &kp DOT     &kp FSLH      &kp RCTRL
-                                        &lt L_NUMPAD TAB  &lt L_NAV SPACE  &lt L_FUNCTION DEL            &kp BSPC    &mo L_SYMBOLS RET  &lt L_BT_CTRL PSCRN
+                                        &lt L_NUMPAD TAB  &lt L_NAV SPACE  &lt L_FUNCTION DEL            &kp BSPC    &lt L_SYMBOLS RET  &lt L_BT_CTRL PSCRN
             >;
         };
 
@@ -88,47 +88,47 @@
             >;
         };
 
-//         symbol_layer {
-// // --------------------------------------------------------------------------------------------------------------------------------
-// // |        |       |       |       |       |     |      |          |        |       |       |         |         |
-// // |        |       |       |       |       |     |      |          |        |       |       |         |         |
-// // |        |       |       |       |       |     |      |          |        |       |       |         |         |
-// //                          |       |       |     |      |          |        |       |
-//             bindings = <
-//     &trans  &kp SQT    &kp LT     &kp GT    &kp DQT    &kp GRAVE     &kp AMPS   &kp UNDER   &kp LBKT  &kp RBKT  &kp PERCENT   &trans
-//     &trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH      &kp PIPE   &kp COLON   &kp LPAR  &kp RPAR  &kp SEMI      &kp DQT
-//     &trans  &kp CARET  &kp SLASH  &kp STAR  &kp FSLH   &kp AT        &kp TILDE  &kp DOLLAR  &kp LBRC  &kp RBRC  &kp QUESTION  &trans
-//                                   &trans    &trans     &trans        &trans     &trans      &trans
-//             >;
-//         };
+        symbol_layer {
+// --------------------------------------------------------------------------------------------------------------------------------
+// |        |       |       |       |       |     |      |          |        |       |       |         |         |
+// |        |       |       |       |       |     |      |          |        |       |       |         |         |
+// |        |       |       |       |       |     |      |          |        |       |       |         |         |
+//                          |       |       |     |      |          |        |       |
+            bindings = <
+    &trans  &kp SQT    &kp LT     &kp GT    &kp DQT    &kp GRAVE     &kp AMPS   &kp UNDER   &kp LBKT  &kp RBKT  &kp PERCENT   &trans
+    &trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH      &kp PIPE   &kp COLON   &kp LPAR  &kp RPAR  &kp SEMI      &kp DQT
+    &trans  &kp CARET  &kp SLASH  &kp STAR  &kp FSLH   &kp AT        &kp TILDE  &kp DOLLAR  &kp LBRC  &kp RBRC  &kp QUESTION  &trans
+                                  &trans    &trans     &trans        &trans     &trans      &trans
+            >;
+        };
 
-//         function_layer {
-// // --------------------------------------------------------------------------------------------------------------------------------
-// // |        |       |       |       |       |     |      |          |        |       |       |         |         |
-// // |        |       |       |       |       |     |      |          |        |       |       |         |         |
-// // |        |       |       |       |       |     |      |          |        |       |       |         |         |
-// //                          |       |       |     |      |          |        |       |
-//             bindings = <
-//     &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp F7  &kp F8  &kp F9  &kp F12  &trans
-//     &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
-//     &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-//                             &trans  &trans  &trans        &trans  &trans  &trans
-//             >;
-//         };
+        function_layer {
+// --------------------------------------------------------------------------------------------------------------------------------
+// |        |       |       |       |       |     |      |          |        |       |       |         |         |
+// |        |       |       |       |       |     |      |          |        |       |       |         |         |
+// |        |       |       |       |       |     |      |          |        |       |       |         |         |
+//                          |       |       |     |      |          |        |       |
+            bindings = <
+    &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp F7  &kp F8  &kp F9  &kp F12  &trans
+    &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
+    &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
+                            &trans  &trans  &trans        &trans  &trans  &trans
+            >;
+        };
 
-//         media_bt_ctrl_layer {
-// // --------------------------------------------------------------------------------------------------------------------------------
-// //        |        |       |        |          |        |          |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |  BT CLR ALL  |
-// //        |  VDWN  |  VUP  |  PREV  |  PL/PAU  |  NEXT  |          |       |       |       |       |       |    BT CLR    |
-// //        |        |       |        |          |        |          |       |       |       |       |       |              |
-// //                         |        |          |        |          |       |       |       |
-//             bindings = <
-//     &none   &none         &none         &none       &none     &none            &none         &none         &none         &none         &none         &bt BT_CLR_ALL
-//     &none   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_PP  &kp C_NEXT       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-//     &none   &none         &none         &none       &none     &none            &none         &none         &none         &none         &none         &none
-//                                         &none       &none     &none            &none         &none         &none
-//             >;
-//         };
+        media_bt_ctrl_layer {
+// --------------------------------------------------------------------------------------------------------------------------------
+//        |        |       |        |          |        |          |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |  BT CLR ALL  |
+//        |  VDWN  |  VUP  |  PREV  |  PL/PAU  |  NEXT  |          |       |       |       |       |       |    BT CLR    |
+//        |        |       |        |          |        |          |       |       |       |       |       |              |
+//                         |        |          |        |          |       |       |       |
+            bindings = <
+    &none   &none         &none         &none       &none     &none            &none         &none         &none         &none         &none         &bt BT_CLR_ALL
+    &none   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_PP  &kp C_NEXT       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+    &none   &none         &none         &none       &none     &none            &none         &none         &none         &none         &none         &none
+                                        &none       &none     &none            &none         &none         &none
+            >;
+        };
 
 //         null_layer {
 // // --------------------------------------------------------------------------------------------------------------------------------
