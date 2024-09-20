@@ -16,6 +16,10 @@
     quick-tap-ms = <250>;
 };
 
+&sk {
+    released-after-ms = <1500>;
+    quick-release;
+};
 
 / {
     macros {
@@ -118,8 +122,8 @@
 // |        |       |       |       |       |     |      |          |        |       |       |         |         |
 //                          |       |       |     |      |          |        |       |
             bindings = <
-    &trans  &kp SQT    &kp LT     &kp GT    &kp DQT    &kp GRAVE     &kp AMPS   &kp LBKT  &kp RBKT  &kp UNDER   &kp PERCENT   &trans
-    &trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH      &kp PIPE   &kp LPAR  &kp RPAR  &kp COLON   &kp SEMI      &kp DQT
+    &trans  &kp SQT    &kp LT     &kp GT    &kp DQT    &kp GRAVE     &kp AMPS   &kp LBKT  &kp RBKT  &kp UNDER   &kp MINUS     &trans
+    &trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH      &kp PIPE   &kp LPAR  &kp RPAR  &kp COLON   &kp SEMI      &kp PERCENT
     &trans  &kp CARET  &kp SLASH  &kp STAR  &kp FSLH   &kp AT        &kp TILDE  &kp LBRC  &kp RBRC  &kp DOLLAR  &kp QUESTION  &trans
                                   &trans    &trans     &trans        &trans     &trans      &trans
             >;
