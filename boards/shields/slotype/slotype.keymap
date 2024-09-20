@@ -11,8 +11,9 @@
 #define L_BT_CTRL  5
 
 
-&mt {
-    tapping-term-ms = <150>;
+&lt {
+    tapping-term-ms = <250>;
+    quick-tap-ms = <250>;
 };
 
 
@@ -29,6 +30,23 @@
                 , <&macro_tap &kp KP_NUM>
                 ;
         };
+
+        stf: super_tab_fwd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LA(TAB) &sk LALT>
+                ;
+        }
+
+        stb: super_tab_bkw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LA(LS(TAB)) &sk LALT>
+                ;
+
+        }
     };
 
     behaviors {
@@ -37,7 +55,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             quick-tap-ms = <250>;
-            // require-prior-idle-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -68,9 +85,9 @@
 //                          |       |       |     |      |          |          |          |
             bindings = <
     &trans  &trans  &trans  &kp LC(LS(TAB))  &kp LC(TAB)  &trans        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &kp F12
-    &trans  &trans  &trans  &kp LA(LS(TAB))  &kp LA(TAB)  &trans        &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &kp F11
-    &trans  &trans  &trans  &trans            &trans      &trans        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &kp F10
-                            &trans            &trans      &trans        &trans    &trans     &trans
+    &trans  &trans  &trans  &stb             &stf         &trans        &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &kp F11
+    &trans  &trans  &trans  &trans           &trans       &trans        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &kp F10
+                            &trans           &trans       &trans        &trans    &trans     &trans
             >;
         };
 
@@ -95,9 +112,9 @@
 // |        |       |       |       |       |     |      |          |        |       |       |         |         |
 //                          |       |       |     |      |          |        |       |
             bindings = <
-    &trans  &kp SQT    &kp LT     &kp GT    &kp DQT    &kp GRAVE     &kp AMPS   &kp UNDER   &kp LBKT  &kp RBKT  &kp PERCENT   &trans
-    &trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH      &kp PIPE   &kp COLON   &kp LPAR  &kp RPAR  &kp SEMI      &kp DQT
-    &trans  &kp CARET  &kp SLASH  &kp STAR  &kp FSLH   &kp AT        &kp TILDE  &kp DOLLAR  &kp LBRC  &kp RBRC  &kp QUESTION  &trans
+    &trans  &kp SQT    &kp LT     &kp GT    &kp DQT    &kp GRAVE     &kp AMPS   &kp LBKT  &kp RBKT  &kp UNDER   &kp PERCENT   &trans
+    &trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH      &kp PIPE   &kp LPAR  &kp RPAR  &kp COLON   &kp SEMI      &kp DQT
+    &trans  &kp CARET  &kp SLASH  &kp STAR  &kp FSLH   &kp AT        &kp TILDE  &kp LBRC  &kp RBRC  &kp DOLLAR  &kp QUESTION  &trans
                                   &trans    &trans     &trans        &trans     &trans      &trans
             >;
         };
