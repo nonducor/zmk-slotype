@@ -37,7 +37,7 @@
             bindings
                 = <&macro_tap &kp LA(TAB) &sk LALT>
                 ;
-        }
+        };
 
         stb: super_tab_bkw {
             compatible = "zmk,behavior-macro";
@@ -46,7 +46,7 @@
                 = <&macro_tap &kp LA(LS(TAB)) &sk LALT>
                 ;
 
-        }
+        };
     };
 
     behaviors {
