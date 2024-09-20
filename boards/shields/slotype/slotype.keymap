@@ -96,9 +96,9 @@
 //                          |       |       |     |      |          |        |       |
             bindings = <
     &trans  &kp SQT    &kp LT     &kp GT    &kp DQT    &kp GRAVE     &kp AMPS   &kp UNDER   &kp LBKT  &kp RBKT  &kp PERCENT   &trans
-    &trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HAS       &kp PIPE   &kp COLON   &kp LPAR  &kp RPAR  &kp SEMI      &kp DQT
+    &trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH      &kp PIPE   &kp COLON   &kp LPAR  &kp RPAR  &kp SEMI      &kp DQT
     &trans  &kp CARET  &kp SLASH  &kp STAR  &kp FSLH   &kp AT        &kp TILDE  &kp DOLLAR  &kp LBRC  &kp RBRC  &kp QUESTION  &trans
-                                  &trans    &trans     &trans        &trans  &trans  &trans
+                                  &trans    &trans     &trans        &trans     &trans      &trans
             >;
         };
 
