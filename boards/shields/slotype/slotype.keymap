@@ -95,8 +95,8 @@
 //                          |       |       |     |      |          |          |          |
             bindings = <
     &trans  &trans  &trans  &kp LC(LS(TAB))  &kp LC(TAB)  &trans        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &kp F12
-    &trans  &trans  &trans  &stb             &stf         &trans        &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &kp F11
-    &trans  &trans  &trans  &trans           &trans       &trans        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &kp F10
+    &trans  &trans  &trans  &trans           &trans       &trans        &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &kp F11
+    &trans  &trans  &trans  &stb             &stf         &trans        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &kp F10
                             &trans           &trans       &trans        &trans    &trans     &trans
             >;
         };
@@ -122,7 +122,7 @@
 // |        |       |       |       |       |     |      |          |        |       |       |         |         |
 //                          |       |       |     |      |          |        |       |
             bindings = <
-    &trans  &kp SQT    &kp LT     &kp GT    &kp DQT    &kp GRAVE     &kp AMPS   &kp LBKT  &kp RBKT  &kp UNDER   &kp MINUS     &trans
+    &trans  &kp SQT    &kp DQT    &kp LT    &kp GT     &kp GRAVE     &kp AMPS   &kp LBKT  &kp RBKT  &kp UNDER   &kp MINUS     &trans
     &trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH      &kp PIPE   &kp LPAR  &kp RPAR  &kp COLON   &kp SEMI      &kp PERCENT
     &trans  &kp CARET  &kp SLASH  &kp STAR  &kp FSLH   &kp AT        &kp TILDE  &kp LBRC  &kp RBRC  &kp DOLLAR  &kp QUESTION  &trans
                                   &trans    &trans     &trans        &trans     &trans      &trans
