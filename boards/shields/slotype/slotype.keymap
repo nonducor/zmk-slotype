@@ -57,6 +57,17 @@
                 ;
 
         };
+
+        nav: navigation_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &mo L_NAV>
+                , <&macro_pause_for_release>
+                , <&macro_release &mo L_NAV>
+                , <&macro_tap &kp K_CANCEL> 
+                ;
+        }
     };
 
     behaviors {
@@ -76,14 +87,14 @@
         querty_layer {
 // ------------------------------------------------------------------------------------------------------------------------------------
 // |   `     |    Q    |    W    |    E    |    R    |    T    |          |    Y    |    U    |    I    |    O    |    P    |    \    |
-// |   TAB   |    A    |    S    |    D    |    F    |    G    |          |    H    |    J    |    K    |    L    |    ;    |    '    |
+// |   ESC   | A/LGUI  | S/LALT  | D/LSHFT | F/LCRTL | G/RALT  |          | H/RALT  | J/RCTRL | K/RSHFT | L/LALT  | ;/RGUI  |    '    |
 // |  SCAPS  |    Z    |    X    |    C    |    V    |    B    |          |    N    |    M    |    ,    |    .    |    /    |  R CTRL |
 //                               |   TAB   |   SPC   |   DEL   |          |  BSPC   |   RET   |  PSCRN  |
             bindings = <
     &kp GRAVE   &kp Q       &kp W       &kp E             &kp R            &kp T                         &kp Y       &kp U              &kp I               &kp O       &kp P         &kp BSLH
     &kp ESC     &hm LGUI A  &hm LALT S  &hm LSHIFT D      &hm LCTRL F      &hm RALT G                    &hm RALT H  &hm RCTRL J        &hm RSHIFT K        &hm LALT L  &hm LGUI SEMI &kp SQT
     &caps_word  &kp Z       &kp X       &kp C             &kp V            &kp B                         &kp N       &kp M              &kp COMMA           &kp DOT     &kp FSLH      &kp RCTRL
-                                        &lt L_NUMPAD TAB  &lt L_NAV SPACE  &lt L_FUNCTION DEL            &kp BSPC    &lt L_SYMBOLS RET  &lt L_BT_CTRL PSCRN
+                                        &lt L_NUMPAD TAB  &lt &nav SPACE   &lt L_FUNCTION DEL            &kp BSPC    &lt L_SYMBOLS RET  &lt L_BT_CTRL PSCRN
             >;
         };
 
@@ -94,9 +105,9 @@
 // |        |       |       |       |       |     |      |    +     |    1     |     2    |     3     |    ,     |    =   |
 //                          |       |       |     |      |          |          |          |
             bindings = <
-    &trans  &trans  &trans  &kp LC(LS(TAB))  &kp LC(TAB)  &trans        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &kp F12
-    &trans  &trans  &trans  &trans           &trans       &trans        &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &kp F11
-    &trans  &trans  &trans  &stb             &stf         &trans        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &kp F10
+    &none   &none   &stb    &kp LC(LS(TAB))  &kp LC(TAB)  &stf          &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none  &kp F12
+    &trans  &trans  &trans  &trans           &trans       &trans        &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans &kp F11
+    &none   &none   &none   &stb             &stf         &none         &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none  &kp F10
                             &trans           &trans       &trans        &trans    &trans     &trans
             >;
         };
@@ -117,15 +128,15 @@
 
         symbol_layer {
 // --------------------------------------------------------------------------------------------------------------------------------
-// |        |       |       |       |       |     |      |          |        |       |       |         |         |
-// |        |       |       |       |       |     |      |          |        |       |       |         |         |
-// |        |       |       |       |       |     |      |          |        |       |       |         |         |
-//                          |       |       |     |      |          |        |       |
+// |        |   '   |   "   |   <   |   >   |  `  |           |   &    |   [   |   ]   |   _   |   -   |       |
+// |        |   !   |   -   |   +   |   =   |  #  |           |   |    |   (   |   )   |   :   |   ;   |   %   |
+// |        |   ^   |   /   |   *   |   /   |  @  |           |   ~    |   {   |   }   |   $   |   ?   |       |
+//                          |       |       |     |           |        |       |       |
             bindings = <
-    &trans  &kp SQT    &kp DQT    &kp LT    &kp GT     &kp GRAVE     &kp AMPS   &kp LBKT  &kp RBKT  &kp UNDER   &kp MINUS     &trans
-    &trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH      &kp PIPE   &kp LPAR  &kp RPAR  &kp COLON   &kp SEMI      &kp PERCENT
-    &trans  &kp CARET  &kp SLASH  &kp STAR  &kp FSLH   &kp AT        &kp TILDE  &kp LBRC  &kp RBRC  &kp DOLLAR  &kp QUESTION  &trans
-                                  &trans    &trans     &trans        &trans     &trans      &trans
+    &trans  &kp SQT    &kp DQT    &kp LT    &kp GT     &kp GRAVE        &kp AMPS   &kp LBKT  &kp RBKT  &kp UNDER   &kp MINUS     &trans
+    &trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH         &kp PIPE   &kp LPAR  &kp RPAR  &kp COLON   &kp SEMI      &kp PERCENT
+    &trans  &kp CARET  &kp SLASH  &kp STAR  &kp FSLH   &kp AT           &kp TILDE  &kp LBRC  &kp RBRC  &kp DOLLAR  &kp QUESTION  &trans
+                                  &trans    &trans     &trans           &trans     &trans      &trans
             >;
         };
 
@@ -136,6 +147,7 @@
 // |        |       |       |       |       |     |      |          |        |       |       |         |         |
 //                          |       |       |     |      |          |        |       |
             bindings = <
+
     &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp F7  &kp F8  &kp F9  &kp F12  &trans
     &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
     &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
