@@ -110,10 +110,10 @@
 // |  SCAPS  |    Z    |    X    |    C    |    V    |    B    |          |    N    |    M    |    ,    |    .    |    /    |  CTX MN |
 //                               |   TAB   |   SPC   |   DEL   |          |  BSPC   |   RET   |  PSCRN  |
             bindings = <
-    &kp GRAVE   &kp Q       &kp W       &kp E             &kp R            &kp T                         &kp Y       &kp U              &kp I               &kp O       &kp P         &kp BSLH
-    &kp ESC     &hm LGUI A  &hm LALT S  &hm LSHIFT D      &hm LCTRL F      &hm RALT G                    &hm RALT H  &hm RCTRL J        &hm RSHIFT K        &hm LALT L  &hm LGUI SEMI &kp SQT
-    &caps_word  &kp Z       &kp X       &kp C             &kp V            &kp B                         &kp N       &kp M              &kp COMMA           &kp DOT     &kp FSLH      &kp K_APP
-                                        &lt L_NUMPAD TAB  &nav TAB SPACE   &lt L_FUNCTION DEL            &kp BSPC    &lt L_SYMBOLS RET  &lt L_BT_CTRL PSCRN
+    &kp GRAVE   &kp Q       &kp W       &kp E             &kp R         &kp T                         &kp Y       &kp U               &kp I                &kp O       &kp P         &kp BSLH
+    &kp ESC     &hm LGUI A  &hm LALT S  &hm LSHIFT D      &hm LCTRL F   &hm RALT G                    &hm RALT H  &hm RCTRL J         &hm RSHIFT K         &hm LALT L  &hm LGUI SEMI &kp SQT
+    &caps_word  &kp Z       &kp X       &kp C             &kp V         &kp B                         &kp N       &kp M               &kp COMMA            &kp DOT     &kp FSLH      &kp K_APP
+                                        &lt L_NUMPAD TAB  &nav 0 SPACE  &lt L_SYMBOLS DEL             &kp BSPC    &lt L_FUNCTION RET  &lt L_BT_CTRL PSCRN
             >;
         };
 
