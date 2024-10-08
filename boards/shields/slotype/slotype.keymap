@@ -88,7 +88,7 @@
             quick-tap-ms = <200>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
-        }
+        };
 
         num: enable_numpad_hold {
             compatible = "zmk,behavior-hold-tap";
