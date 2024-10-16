@@ -10,6 +10,20 @@
 #define L_FUNCTION 4
 #define L_BT_CTRL  5
 
+// Rows
+#define RLT    0  1  2  3  4  5
+#define RRT    6  7  8  9 10 11
+#define RLM   12 13 14 15 16 17
+#define RRM   18 19 20 21 22 23
+#define RLB   24 25 26 27 28 29
+#define RRB   30 31 32 33 34 35
+#define RLH   36 37 38
+#define RRH   39 40 41
+
+#define LSIDE  RLT RLM RLB
+#define RSIDE  RRT RRM RRB
+
+
 
 &lt {
     tapping-term-ms = <250>;
@@ -90,12 +104,23 @@
             bindings = <&kp>, <&kp>;
         };
 
-        sm: shift_mod {
+        lsm: left_shift_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            quick-tap-ms = <180>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <200>;
             flavor = "balanced";
+            hold-trigger-key-positions = <RSIDE>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        rsm: right_shift_mod {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <LSIDE>;
             bindings = <&kp>, <&kp>;
         };
 
@@ -129,7 +154,7 @@
 //                               |   TAB   |   SPC   |   DEL   |          |  BSPC   |   RET   |  PSCRN  |
             bindings = <
     &kp GRAVE   &kp Q       &kp W       &kp E             &kp R         &kp T                         &kp Y       &kp U               &kp I                &kp O       &kp P         &kp BSLH
-    &kp ESC     &pm LGUI A  &hm LALT S  &sm LSHIFT D      &hm LCTRL F   &hm RALT G                    &hm RALT H  &hm RCTRL J         &sm RSHIFT K         &hm LALT L  &pm LGUI SEMI &kp SQT
+    &kp ESC     &pm LGUI A  &hm LALT S  &lsm LSHIFT D     &hm LCTRL F   &hm RALT G                    &hm RALT H  &hm RCTRL J         &rsm RSHIFT K        &hm LALT L  &pm LGUI SEMI &kp SQT
     &caps_word  &kp Z       &kp X       &kp C             &kp V         &kp B                         &kp N       &kp M               &kp COMMA            &kp DOT     &kp FSLH      &kp K_APP
                                         &lt L_NUMPAD TAB  &nav 0 SPACE  &lt L_SYMBOLS DEL             &kp BSPC    &lt L_FUNCTION RET  &lt L_BT_CTRL PSCRN
             >;
