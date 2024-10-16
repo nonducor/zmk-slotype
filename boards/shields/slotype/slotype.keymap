@@ -109,7 +109,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             quick-tap-ms = <200>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             hold-trigger-key-positions = <RSIDE>;
             bindings = <&kp>, <&kp>;
         };
@@ -119,7 +119,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             quick-tap-ms = <200>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             hold-trigger-key-positions = <LSIDE>;
             bindings = <&kp>, <&kp>;
         };
