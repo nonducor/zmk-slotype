@@ -112,7 +112,7 @@
         lsm: left_shift_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <160>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <RSIDE>;
@@ -122,7 +122,7 @@
         rsm: right_shift_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <160>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <LSIDE>;
