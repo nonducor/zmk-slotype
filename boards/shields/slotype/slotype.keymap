@@ -94,8 +94,9 @@
         pm: pinky_mod {  // Give some more time for the pinky
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <200>;
+            require-prior-idle = <150>
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -103,8 +104,9 @@
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <180>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <150>;
+            require-prior-idle = <150>
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -113,7 +115,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <200>;
+            quick-tap-ms = <150>;
             flavor = "balanced";
             hold-trigger-key-positions = <RSIDE>;
             bindings = <&kp>, <&kp>;
@@ -123,7 +125,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <200>;
+            quick-tap-ms = <150>;
             flavor = "balanced";
             hold-trigger-key-positions = <LSIDE>;
             bindings = <&kp>, <&kp>;
@@ -229,10 +231,10 @@
 //        |        |       |        |          |        |          |       |       |       |       |       |              |
 //                         |        |          |        |          |       |       |       |
             bindings = <
-    XXX   XXX           XXX           XXX         XXX       XXX              XXX           XXX           XXX           XXX           XXX           &bt BT_CLR_ALL
-    XXX   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_PP  &kp C_NEXT       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-    XXX   XXX           XXX           XXX         XXX       XXX              XXX           XXX           XXX           XXX           XXX           XXX
-                                      XXX         XXX       XXX              XXX           XXX           XXX
+    XXX   XXX           XXX           XXX         XXX       &bootloader             XXX           XXX           XXX           XXX           XXX           &bt BT_CLR_ALL
+    XXX   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_PP  &kp C_NEXT              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+    XXX   XXX           XXX           XXX         XXX       XXX                     XXX           XXX           XXX           XXX           XXX           XXX
+                                      XXX         XXX       XXX                     XXX           XXX           XXX
             >;
         };
 
