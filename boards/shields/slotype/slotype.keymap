@@ -2,6 +2,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+// Aliases
+#define XXX &none
+#define ___ &trans
+
+
 // Layer names
 #define L_BASE     0
 #define L_NAV      1
@@ -20,8 +25,8 @@
 #define RLH   36 37 38
 #define RRH   39 40 41
 
-#define LSIDE  RLT RLM RLB
-#define RSIDE  RRT RRM RRB
+#define LSIDE  RLT RLM RLB RLH
+#define RSIDE  RRT RRM RRB RRH
 
 
 
@@ -107,7 +112,7 @@
         lsm: left_shift_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <160>;
             quick-tap-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <RSIDE>;
@@ -117,7 +122,7 @@
         rsm: right_shift_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <160>;
             quick-tap-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <LSIDE>;
@@ -167,10 +172,10 @@
 // |        |       |       |       |       |     |      |    +     |    1     |     2    |     3     |    ,     |    =   |
 //                          |       |       |     |      |          |          |          |
             bindings = <
-    &none   &kp PAUSE_BREAK  &stb       &kp LC(LS(TAB))  &kp LC(TAB)  &stf          &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none  &kp F12
-    &trans  &trans           &trans     &trans           &trans       &trans        &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans &kp F11
-    &none   &kp LC(Z)        &kp LC(X)  &kp LC(C)        &kp LC(V)    &kp LC(A)     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none  &kp F10
-                                        &trans           &trans       &trans        &trans    &trans     &trans
+    XXX      &kp PAUSE_BREAK  &stb       &kp LC(LS(TAB))  &kp LC(TAB)  &stf          &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    XXX  &kp F12
+    ___      ___               ___       ___              ___          ___           &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  ___  &kp F11
+    XXX      &kp LC(Z)        &kp LC(X)  &kp LC(C)        &kp LC(V)    &kp LC(A)     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    XXX  &kp F10
+                                         ___              ___          ___           ___       ___        ___
             >;
         };
 
@@ -181,10 +186,10 @@
 // |        |       |       |       |       |     |      |    +     |    1     |     2    |     3     |    ,     |    =   |
 //                          |       |       |     |      |          |          |          |
             bindings = <
-    &trans  &trans  &trans  &trans  &trans  &trans        &kp ASTRK  &kp N7  &kp N8  &kp N9  &kp EQUAL  &kp SLASH
-    &trans  &trans  &trans  &trans  &trans  &trans        &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DOT    &kp CARET
-    &trans  &trans  &trans  &trans  &trans  &trans        &kp PLUS   &kp N1  &kp N2  &kp N3  &kp COMMA  &kp RET
-                            &trans  &trans  &trans        &trans     &trans  &kp N0
+    ___      ___     ___     ___     ___     ___        &kp ASTRK  &kp N7  &kp N8  &kp N9  &kp EQUAL  &kp SLASH
+    ___      ___     ___     ___     ___     ___        &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DOT    &kp CARET
+    ___      ___     ___     ___     ___     ___        &kp PLUS   &kp N1  &kp N2  &kp N3  &kp COMMA  &kp RET
+                             ___     ___     ___        ___        ___     &kp N0
             >;
         };
 
@@ -195,10 +200,10 @@
 // |        |   ^   |   /   |   *   |   /   |  @  |           |   ~    |   {   |   }   |   $   |   ?   |       |
 //                          |       |       |     |           |        |       |       |
             bindings = <
-    &trans  &kp SQT    &kp DQT    &kp LT    &kp GT     &kp GRAVE        &kp AMPS   &kp LBKT  &kp RBKT  &kp UNDER   &kp MINUS     &trans
-    &trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH         &kp PIPE   &kp LPAR  &kp RPAR  &kp COLON   &kp PERCENT   &kp SEMI
-    &trans  &kp CARET  &kp SLASH  &kp STAR  &kp BSLH   &kp AT           &kp TILDE  &kp LBRC  &kp RBRC  &kp DOLLAR  &kp QUESTION  &trans
-                                  &trans    &trans     &trans           &trans     &trans      &trans
+    ___  &kp SQT    &kp DQT    &kp LT    &kp GT     &kp GRAVE        &kp AMPS   &kp LBKT  &kp RBKT  &kp UNDER   &kp MINUS     ___
+    ___  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH         &kp PIPE   &kp LPAR  &kp RPAR  &kp COLON   &kp PERCENT   &kp SEMI
+    ___  &kp CARET  &kp SLASH  &kp STAR  &kp BSLH   &kp AT           &kp TILDE  &kp LBRC  &kp RBRC  &kp DOLLAR  &kp QUESTION  ___
+                               ___       ___        ___              ___        ___        ___
             >;
         };
 
@@ -210,10 +215,10 @@
 //                          |       |       |     |      |          |        |       |
             bindings = <
 
-    &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp F7  &kp F8  &kp F9  &kp F12  &trans
-    &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
-    &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-                            &trans  &trans  &trans        &trans  &trans  &trans
+    ___      ___     ___     ___     ___     ___        ___  &kp F7  &kp F8  &kp F9  &kp F12  ___
+    ___      ___     ___     ___     ___     ___        ___  &kp F4  &kp F5  &kp F6  &kp F11  ___
+    ___      ___     ___     ___     ___     ___        ___  &kp F1  &kp F2  &kp F3  &kp F10  ___
+                             ___     ___     ___        ___  ___     ___
             >;
         };
 
@@ -224,10 +229,10 @@
 //        |        |       |        |          |        |          |       |       |       |       |       |              |
 //                         |        |          |        |          |       |       |       |
             bindings = <
-    &none   &none         &none         &none       &none     &none            &none         &none         &none         &none         &none         &bt BT_CLR_ALL
-    &none   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_PP  &kp C_NEXT       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-    &none   &none         &none         &none       &none     &none            &none         &none         &none         &none         &none         &none
-                                        &none       &none     &none            &none         &none         &none
+    XXX   XXX           XXX           XXX         XXX       XXX              XXX           XXX           XXX           XXX           XXX           &bt BT_CLR_ALL
+    XXX   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_PP  &kp C_NEXT       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+    XXX   XXX           XXX           XXX         XXX       XXX              XXX           XXX           XXX           XXX           XXX           XXX
+                                      XXX         XXX       XXX              XXX           XXX           XXX
             >;
         };
 
@@ -238,10 +243,10 @@
 // // |        |       |       |       |       |     |      |          |        |       |       |         |         |
 // //                          |       |       |     |      |          |        |       |
 //             bindings = <
-//     &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
-//     &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
-//     &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
-//                             &trans  &trans  &trans        &trans  &trans  &trans
+//     ___      ___     ___     ___     ___     ___          ___  ___  ___  ___  ___  ___
+//     ___      ___     ___     ___     ___     ___          ___  ___  ___  ___  ___  ___
+//     ___      ___     ___     ___     ___     ___          ___  ___  ___  ___  ___  ___
+//                             ___  ___  ___        ___  ___  ___
 //             >;
 //         };
 
@@ -252,10 +257,10 @@
 // // |        |       |       |       |       |     |      |          |        |       |       |         |         |
 // //                          |       |       |     |      |          |        |       |
 //             bindings = <
-//     &none  &none  &none  &none  &none  &none        &none  &none  &none  &none  &none  &none
-//     &none  &none  &none  &none  &none  &none        &none  &none  &none  &none  &none  &none
-//     &none  &none  &none  &none  &none  &none        &none  &none  &none  &none  &none  &none
-//                          &none  &none  &none        &none  &none  &none
+//     XXX  XXX  XXX  XXX  XXX  XXX        XXX  XXX  XXX  XXX  XXX  XXX
+//     XXX  XXX  XXX  XXX  XXX  XXX        XXX  XXX  XXX  XXX  XXX  XXX
+//     XXX  XXX  XXX  XXX  XXX  XXX        XXX  XXX  XXX  XXX  XXX  XXX
+//                          XXX  XXX  XXX        XXX  XXX  XXX
 //             >;
 //         };
 
