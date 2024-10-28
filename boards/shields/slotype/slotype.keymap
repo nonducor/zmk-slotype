@@ -94,7 +94,7 @@
         pm: pinky_mod {  // Give some more time for the pinky
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <230>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             //require-prior-idle-ms = <150>;
             flavor = "tap-preferred";
@@ -143,8 +143,8 @@
         nav: enable_nav_hold {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            quick-tap-ms = <250>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&enav>, <&kp>;
         };
@@ -160,10 +160,10 @@
 // |  SCAPS  |    Z    |    X    |    C    |    V    |    B    |          |    N    |    M    |    ,    |    .    |    /    |  CTX MN |
 //                               |   TAB   |   SPC   |   DEL   |          |  BSPC   |   RET   |  PSCRN  |
             bindings = <
-    &kp GRAVE   &kp Q       &kp W       &kp E             &kp R         &kp T                         &kp Y       &kp U               &kp I                &kp O       &kp P         &kp BSLH
-    &kp ESC     &pm LGUI A  &hm LALT S  &lsm LSHIFT D     &hm LCTRL F   &hm RALT G                    &hm RALT H  &hm RCTRL J         &rsm RSHIFT K        &hm LALT L  &pm LGUI SEMI &kp SQT
-    &caps_word  &kp Z       &kp X       &kp C             &kp V         &kp B                         &kp N       &kp M               &kp COMMA            &kp DOT     &kp FSLH      &kp K_APP
-                                        &lt L_NUMPAD TAB  &nav 0 SPACE  &lt L_SYMBOLS DEL             &kp BSPC    &lt L_FUNCTION RET  &lt L_BT_CTRL PSCRN
+    &kp GRAVE   &kp Q       &kp W       &kp E             &kp R         &kp T                         &kp Y          &kp U               &kp I                &kp O       &kp P         &kp BSLH
+    &kp ESC     &pm LGUI A  &hm LALT S  &lsm LSHIFT D     &hm LCTRL F   &hm RALT G                    &hm RALT H     &hm RCTRL J         &rsm RSHIFT K        &hm LALT L  &pm LGUI SEMI &kp SQT
+    &caps_word  &kp Z       &kp X       &kp C             &kp V         &kp B                         &kp N          &kp M               &kp COMMA            &kp DOT     &kp FSLH      &kp K_APP
+                                        &lt L_NUMPAD TAB  &nav 0 SPACE  &lt L_SYMBOLS DEL             &nav 0 BSPC    &lt L_FUNCTION RET  &lt L_BT_CTRL PSCRN
             >;
         };
 
@@ -174,9 +174,9 @@
 // |        |       |       |       |       |     |      |    +     |    1     |     2    |     3     |    ,     |    =   |
 //                          |       |       |     |      |          |          |          |
             bindings = <
-    XXX      &kp PAUSE_BREAK  &stb       &kp LC(LS(TAB))  &kp LC(TAB)  &stf          &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    XXX  &kp F12
-    ___      ___               ___       ___              ___          ___           &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  ___  &kp F11
-    XXX      &kp LC(Z)        &kp LC(X)  &kp LC(C)        &kp LC(V)    &kp LC(A)     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    XXX  &kp F10
+    XXX      &kp PAUSE_BREAK  &stb       &kp LC(LS(TAB))  &kp LC(TAB)  &stf          &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    XXX        &kp F12
+    ___      ___               ___       ___              ___          ___           &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  ___        &kp F11
+    XXX      &kp LC(Z)        &kp LC(X)  &kp LC(C)        &kp LC(V)    &kp LC(A)     &kp LC(A)  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &kp F10
                                          ___              ___          ___           ___       ___        ___
             >;
         };
