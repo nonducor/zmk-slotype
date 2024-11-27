@@ -31,8 +31,8 @@
 
 
 &lt {
-    tapping-term-ms = <250>;
-    quick-tap-ms = <250>;
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
 };
 
 &sk {
@@ -96,7 +96,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <230>;
             quick-tap-ms = <200>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -106,7 +106,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <180>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -114,7 +114,7 @@
         lsm: left_shift_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <RSIDE>;
@@ -124,7 +124,7 @@
         rsm: right_shift_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <LSIDE>;
@@ -197,14 +197,14 @@
 
         symbol_layer {
 // --------------------------------------------------------------------------------------------------------------------------------
-// |        |   '   |   "   |   <   |   >   |  `  |                |   &    |   [   |   ]   |   _   |   -   |       |
-// |        |   !   |   -   |   +   |   =   |  #  |                |   |    |   (   |   )   |   :   |   ;   |   %   |
-// |        |   ^   |   /   |   *   |   \   |  @  |                |   ~    |   {   |   }   |   $   |   ?   |       |
+// |        |   '   |   "   |   <   |   >   |  `  |                |   &    |   [   |   ]   |   _   |   ~   |       |
+// |        |   !   |   -   |   +   |   =   |  #  |                |   -    |   (   |   )   |   :   |   %   |   ;   |
+// |        |   ^   |   /   |   *   |   \   |  @  |                |   |    |   {   |   }   |   $   |   ?   |       |
 //                          |       |       |     |                |        |       |       |
             bindings = <
-    ___  &kp SQT    &kp DQT    &kp LT    &kp GT     &kp GRAVE        &kp AMPS   &kp LBKT  &kp RBKT  &kp UNDER   &kp MINUS     ___
-    ___  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH         &kp PIPE   &kp LPAR  &kp RPAR  &kp COLON   &kp PERCENT   &kp SEMI
-    ___  &kp CARET  &kp SLASH  &kp STAR  &kp BSLH   &kp AT           &kp TILDE  &kp LBRC  &kp RBRC  &kp DOLLAR  &kp QUESTION  ___
+    ___  &kp SQT    &kp DQT    &kp LT    &kp GT     &kp GRAVE        &kp AMPS   &kp LBKT  &kp RBKT  &kp UNDER   &kp TILDE     ___
+    ___  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH         &kp MINUS  &kp LPAR  &kp RPAR  &kp COLON   &kp PERCENT   &kp SEMI
+    ___  &kp CARET  &kp SLASH  &kp STAR  &kp BSLH   &kp AT           &kp PIPE   &kp LBRC  &kp RBRC  &kp DOLLAR  &kp QUESTION  ___
                                ___       ___        ___              ___        ___        ___
             >;
         };
