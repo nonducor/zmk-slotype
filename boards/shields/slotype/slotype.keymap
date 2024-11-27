@@ -31,8 +31,8 @@
 
 
 &lt {
-    tapping-term-ms = <200>;
-    quick-tap-ms = <200>;
+    tapping-term-ms = <180>;
+    quick-tap-ms = <280>;
 };
 
 &sk {
@@ -95,7 +95,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <230>;
-            quick-tap-ms = <200>;
+            quick-tap-ms = <250>;
             require-prior-idle-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -105,7 +105,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <180>;
+            quick-tap-ms = <250>;
             require-prior-idle-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -114,8 +114,8 @@
         lsm: left_shift_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <250>;
             flavor = "balanced";
             hold-trigger-key-positions = <RSIDE>;
             bindings = <&kp>, <&kp>;
@@ -124,8 +124,8 @@
         rsm: right_shift_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <250>;
             flavor = "balanced";
             hold-trigger-key-positions = <LSIDE>;
             bindings = <&kp>, <&kp>;
