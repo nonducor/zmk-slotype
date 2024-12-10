@@ -169,10 +169,10 @@
 
         nav_layer {
 // --------------------------------------------------------------------------------------------------------------------------------
-// |        |       |       |       |       |     |      |    *     |    7     |     8    |     9     |    -     |    /   |
-// |        |       |       |       |       |     |      |    0     |    4     |     5    |     6     |    .     |    ^   |
-// |        |       |       |       |       |     |      |    +     |    1     |     2    |     3     |    ,     |    =   |
-//                          |       |       |     |      |          |          |          |
+// |         |         |         |         |          |        |          |    *     |    7    |    8    |    9    |   -    |    /   |
+// |         |         |         |         |          |        |          |    0     |    4    |    5    |    6    |   .    |    ^   |
+// |         |         |         |         |          |        |          |    +     |    1    |    2    |    3    |   ,    |    =   |
+//                               |         |          |        |          |          |         |         |
             bindings = <
     XXX      &kp PAUSE_BREAK  &stb       &kp LC(LS(TAB))  &kp LC(TAB)  &stf          &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    XXX        &kp F12
     ___      ___               ___       ___              ___          ___           &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  ___        &kp F11
@@ -183,10 +183,10 @@
 
         numpad_layer {
 // --------------------------------------------------------------------------------------------------------------------------------
-// |        |       |       |       |       |     |             |    *     |    7     |     8    |     9     |    =     |    /   |
-// |        |       |       |       |       |     |             |    -     |    4     |     5    |     6     |    .     |    ^   |
-// |        |       |       |       |       |     |             |    +     |    1     |     2    |     3     |    /     |    ,   |
-//                          |       |       |     |             |          |          |          |
+// |         |         |         |         |          |        |          |    *     |    7     |     8    |     9     |    =     |    /   |
+// |         |         |         |         |          |        |          |    -     |    4     |     5    |     6     |    .     |    ^   |
+// |         |         |         |         |          |        |          |    +     |    1     |     2    |     3     |    /     |    ,   |
+//                               |         |          |        |          |          |          |          |
             bindings = <
     ___      ___     ___     ___     ___     ___                 &kp ASTRK  &kp N7  &kp N8  &kp N9  &kp EQUAL  &kp SLASH
     ___      ___     ___     ___     ___     ___                 &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DOT    &kp CARET
@@ -197,12 +197,12 @@
 
         symbol_layer {
 // --------------------------------------------------------------------------------------------------------------------------------
-// |        |   '   |   "   |   <   |   >   |  `  |                |   &    |   [   |   ]   |   _   |   ~   |       |
+// |        |   '   |   "   |   <   |   >   |  `  |                |   &    |   [   |   ]   |   _   |   =   |   ~   |
 // |        |   !   |   -   |   +   |   =   |  #  |                |   -    |   (   |   )   |   :   |   %   |   ;   |
 // |        |   ^   |   /   |   *   |   \   |  @  |                |   |    |   {   |   }   |   $   |   ?   |       |
 //                          |       |       |     |                |        |       |       |
             bindings = <
-    ___  &kp SQT    &kp DQT    &kp LT    &kp GT     &kp GRAVE        &kp AMPS   &kp LBKT  &kp RBKT  &kp UNDER   &kp TILDE     ___
+    ___  &kp SQT    &kp DQT    &kp LT    &kp GT     &kp GRAVE        &kp AMPS   &kp LBKT  &kp RBKT  &kp UNDER   &kp EQUAL     &kp TILDE
     ___  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH         &kp MINUS  &kp LPAR  &kp RPAR  &kp COLON   &kp PERCENT   &kp SEMI
     ___  &kp CARET  &kp SLASH  &kp STAR  &kp BSLH   &kp AT           &kp PIPE   &kp LBRC  &kp RBRC  &kp DOLLAR  &kp QUESTION  ___
                                ___       ___        ___              ___        ___        ___
