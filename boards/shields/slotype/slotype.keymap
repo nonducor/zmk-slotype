@@ -197,14 +197,14 @@
 
         symbol_layer {
 // --------------------------------------------------------------------------------------------------------------------------------
-// |        |   '   |   "   |   <   |   >   |  `  |                |   &    |   {   |   }   |   _   |   =   |   ~   |
-// |        |   !   |   -   |   +   |   =   |  #  |                |   -    |   (   |   )   |   :   |   %   |   ;   |
-// |        |   ^   |   /   |   *   |   \   |  @  |                |   |    |   [   |   ]   |   $   |   ?   |       |
+// |        |   '   |   "   |   <   |   >   |  `  |                |   *    |   {   |   }   |   _   |   =   |   ~   |
+// |        |   !   |   -   |   |   |   &   |  #  |                |   -    |   (   |   )   |   :   |   %   |   ;   |
+// |        |   ^   |   /   |   *   |   \   |  @  |                |   +    |   [   |   ]   |   $   |   ?   |       |
 //                          |       |       |     |                |        |       |       |
             bindings = <
-    ___  &kp SQT    &kp DQT    &kp LT    &kp GT     &kp GRAVE        &kp AMPS   &kp LBRC  &kp RBRC  &kp UNDER   &kp EQUAL     &kp TILDE
-    ___  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH         &kp MINUS  &kp LPAR  &kp RPAR  &kp COLON   &kp PERCENT   &kp SEMI
-    ___  &kp CARET  &kp SLASH  &kp STAR  &kp BSLH   &kp AT           &kp PIPE   &kp LBKT  &kp RBKT  &kp DOLLAR  &kp QUESTION  ___
+    ___  &kp SQT    &kp DQT    &kp LT    &kp GT     &kp GRAVE        &kp ASTRK  &kp LBRC  &kp RBRC  &kp UNDER   &kp EQUAL     &kp TILDE
+    ___  &kp EXCL   &kp MINUS  &kp PIPE  &kp AMPS   &kp HASH         &kp MINUS  &kp LPAR  &kp RPAR  &kp COLON   &kp PERCENT   &kp SEMI
+    ___  &kp CARET  &kp SLASH  &kp STAR  &kp BSLH   &kp AT           &kp PLUS   &kp LBKT  &kp RBKT  &kp DOLLAR  &kp QUESTION  ___
                                ___       ___        ___              ___        ___        ___
             >;
         };
