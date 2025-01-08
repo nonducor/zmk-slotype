@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 // Aliases
 #define XXX &none
@@ -233,7 +234,7 @@
             bindings = <
     XXX   XXX           XXX           XXX         XXX       &bootloader             XXX           XXX           XXX           XXX           XXX           &bt BT_CLR_ALL
     XXX   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_PP  &kp C_NEXT              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-    XXX   XXX           XXX           XXX         XXX       XXX                     XXX           XXX           XXX           XXX           XXX           XXX
+    XXX   XXX           XXX           XXX         XXX       XXX                     &out OUT_USB  &out OUT_BLE  XXX           XXX           XXX           XXX
                                       XXX         XXX       XXX                     XXX           XXX           XXX
             >;
         };
