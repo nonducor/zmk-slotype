@@ -4,7 +4,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 // Configs
-#define COMBO_TIMEOUT_MS    100
+#define COMBO_TIMEOUT_MS    50
 
 // Aliases
 #define XXX &none
@@ -37,7 +37,7 @@
 // Combo definition macro
 #define MKCOMBO(name, key1, key2, binding)                                     \
         combo_##name {                                                         \
-            timeout-ms = <100>;                                                \
+            timeout-ms = <50>;                                                 \
             key-positions = <key1 key2>;                                       \
             bindings = <&kp binding>;                                          \
             layers = <L_BASE L_NAV L_NUMPAD L_SYMBOLS L_FUNCTION>;             \
