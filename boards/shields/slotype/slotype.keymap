@@ -97,7 +97,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <230>;
             quick-tap-ms = <250>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -161,11 +161,10 @@
 // |  SCAPS  |    Z    |    X    |    C    |    V    |    B    |          |    N    |    M    |    ,    |    .    |    /    |  CTX MN |
 //                               |   TAB   |   SPC   |   DEL   |          |  BSPC   |   RET   |  PSCRN  |
             bindings = <
-    &kp GRAVE   &kp Q       &kp W       &kp E             &kp R         &kp T                         &kp Y                  &kp U               &kp I                &kp O       &kp P         &kp BSLH
-    &kp ESC     &pm LGUI A  &hm LALT S  &lsm LSHIFT D     &hm LCTRL F   &hm RALT G                    &hm RALT H             &hm RCTRL J         &rsm RSHIFT K        &hm LALT L  &pm LGUI SEMI &kp SQT
-    &caps_word  &kp Z       &kp X       &kp C             &kp V         &kp B                         &kp N                  &kp M               &kp COMMA            &kp DOT     &kp FSLH      &kp K_APP
-//                                        &lt L_NUMPAD TAB  &nav 0 RET  &lt L_SYMBOLS DEL             &lt L_FUNCTION BSPC    &nav 0 SPACE          &lt L_BT_CTRL PSCRN
-                                        &lt L_NUMPAD TAB  &nav 0 SPACE  &lt L_SYMBOLS DEL             &lt L_FUNCTION BSPC    &nav 0 RET          &lt L_BT_CTRL PSCRN
+    &kp GRAVE   &kp Q       &kp W       &kp E               &kp R           &kp T                         &kp Y                  &kp U               &kp I                &kp O       &kp P         &kp BSLH
+    &kp ESC     &pm LGUI A  &hm LALT S  &lsm LSHIFT D       &hm LCTRL F     &hm RALT G                    &hm RALT H             &hm RCTRL J         &rsm RSHIFT K        &hm LALT L  &pm LGUI SEMI &kp SQT
+    &caps_word  &kp Z       &kp X       &kp C               &kp V           &kp B                         &kp N                  &kp M               &kp COMMA            &kp DOT     &kp FSLH      &kp PSCRN
+                                        &lt L_FUNCTION DEL  &nav 0 TAB      &lt L_SYMBOLS SPACE           &lt L_NUMPAD RET       &nav 0 K_APP        &lt L_BT_CTRL BSPC
             >;
         };
 
@@ -192,7 +191,7 @@
             bindings = <
     ___      ___     ___     ___     ___     ___                 &kp ASTRK  &kp N7  &kp N8  &kp N9  &kp EQUAL  &kp SLASH
     ___      ___     ___     ___     ___     ___                 &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DOT    &kp CARET
-    ___      ___     ___     ___     ___     ___                 &kp PLUS   &kp N1  &kp N2  &kp N3  &kp SLASH  &kp COMMA
+    ___      ___     ___     ___     ___     ___                 &kp N0     &kp N1  &kp N2  &kp N3  &kp COMMA  &kp PLUS
                              ___     ___     ___                 ___        ___     &kp N0
             >;
         };
